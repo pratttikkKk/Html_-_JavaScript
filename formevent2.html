@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Focus Effect</title>
+    <style>
+        input {
+            padding: 8px;
+            border: 2px solid gray;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Focus & Blur Example</h2>
+
+<input type="text" id="myInput" placeholder="Click inside me">
+
+<p id="message"></p>
+
+<script>
+
+    var inputBox = document.getElementById("myInput");
+    var message = document.getElementById("message");
+
+    // When cursor enters input
+    inputBox.addEventListener("focus", function() {
+        inputBox.style.backgroundColor = "lightyellow";
+        message.innerHTML = "You are typing...";
+        console.log("Input focused");
+    });
+
+    // When cursor leaves input
+    inputBox.addEventListener("blur", function() {
+        inputBox.style.backgroundColor = "white";
+        message.innerHTML = "You left the input box.";
+        console.log("Input blurred");
+    });
+
+</script>
+
+</body>
+</html>

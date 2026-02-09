@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keyboard Color Change</title>
+</head>
+
+<body onkeydown="changeBg(event)">
+
+    <h3>Press any key to change the background color</h3>
+    <p id="keyName"></p>
+
+    <script>
+
+        function changeBg(event) {
+
+            // Change background color
+            var randomColor = "#" + Math.floor(Math.random() * 9999999);
+            document.body.style.backgroundColor = randomColor;
+
+            // Show pressed key
+            document.getElementById("keyName").innerHTML =
+                "You pressed key: " + event.key;
+        }
+
+    </script>
+
+</body>
+</html>

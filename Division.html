@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Division Exception Handling</title>
+</head>
+<body>
+
+<h3>Divide Two Numbers</h3>
+
+<input type="number" id="first" placeholder="Enter First Number">
+<input type="number" id="second" placeholder="Enter Second Number">
+<br><br>
+
+<button onclick="performDivision()">Calculate</button>
+
+<p id="output"></p>
+
+<script>
+
+function performDivision() {
+
+    try {
+        var x = Number(document.getElementById("first").value);
+        var y = Number(document.getElementById("second").value);
+
+        if (y == 0) {
+            throw new Error("Cannot divide by zero");
+        }
+
+        var result = x / y;
+
+        document.getElementById("output").innerText =
+            "Answer: " + result;
+    }
+    catch (error) {
+        document.getElementById("output").innerText =
+            "Error: " + error.message;
+    }
+    finally {
+        console.log("Operation completed");
+    }
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Exit Warning</title>
+</head>
+<body>
+
+<h2>Try refreshing or closing this page</h2>
+
+<script>
+
+    window.addEventListener("beforeunload", function (event) {
+        event.preventDefault();   
+        event.returnValue = "Do you really want to exit?";
+    });
+
+</script>
+
+</body>
+</html>

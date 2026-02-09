@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Username Validation</title>
+</head>
+<body>
+
+<h2>🔐 Username Verification</h2>
+
+<input type="text" id="username" placeholder="Enter your username">
+<br><br>
+
+<button onclick="checkUsername()">Validate</button>
+
+<p id="userResult"></p>
+
+<script>
+function checkUsername() {
+    try {
+        var username = document.getElementById("username").value;
+
+        if (username.trim() === "") {
+            throw new Error("Username cannot be empty");
+        }
+
+        document.getElementById("userResult").innerText =
+            "Username Accepted";
+    }
+    catch (e) {
+        document.getElementById("userResult").innerText =
+            "Error: " + e.message;
+    }
+}
+</script>
+
+</body>
+</html>

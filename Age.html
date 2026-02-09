@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Exception Program</title>
+</head>
+<body>
+
+<h3>Enter Your Age</h3>
+
+<input type="number" id="age" placeholder="Enter Age">
+<br><br>
+
+<button onclick="validateAge()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+
+function validateAge() {
+
+    try {
+        var age = Number(document.getElementById("age").value);
+
+        if (age < 18) {
+            throw "You are not eligible. Age must be 18 or above.";
+        }
+
+        document.getElementById("result").innerText =
+            "Access Granted. You are eligible.";
+
+    }
+    catch (error) {
+        document.getElementById("result").innerText =
+            "Error: " + error;
+    }
+
+}
+
+</script>
+
+</body>
+</html>

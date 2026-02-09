@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseEvents in Js</title>
+</head>
+<body id="ss">
+    <button  onclick="Changecolor()">change body color</button><br><br>
+    <button onmouseover="Showmessage()">Click me</button><br><br>
+    <button ondblclick="Showalert()">Click me</button><br><br>
+    <div onmouseover="over()" onmouseout="out()">
+        this is a division.
+    </div><br>
+    <div onmouseup="up()" onmousedown="down()">
+        this is second division.
+    </div>
+    <script>
+        function Changecolor(){
+            document.getElementById("ss").style.backgroundColor = "black";
+        }
+        function Showmessage(){
+            alert("moving mouse over the button");
+        }
+        function Showalert(){
+            alert("Button has double clicked");
+        }
+        function over(){
+            alert("Inside the division");
+        }
+        function out(){
+            alert("came out of div");
+        }
+        function up(){
+            console.log("mouse is going up");
+        }
+        function down(){
+            console.log("mouse is going down");
+        }
+    </script>
+</body>
+</html>
