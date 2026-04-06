@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Validation</title>
+</head>
+<body>
+
+<form onsubmit="return checkNumber()">
+    Enter Value:
+    <input type="text" id="numberInput">
+    <br><br>
+    <input type="submit" value="Check">
+</form>
+
+<script>
+
+function checkNumber() {
+
+    var value = document.getElementById("numberInput").value;
+
+    if (value == "") {
+        alert("Input cannot be empty");
+        return false;
+    }
+
+    if (isNaN(value)) {
+        alert("Please enter numeric value only");
+        return false;
+    }
+
+    alert("Number Accepted");
+    return true;
+}
+
+</script>
+
+</body>
+</html>
